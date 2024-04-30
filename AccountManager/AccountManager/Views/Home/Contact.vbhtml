@@ -2,13 +2,11 @@
     ViewData("Title") = "Contato"
 End Code
 
-<h2>@ViewData("Title").</h2>
-<h3>@ViewData("Message")</h3>
+<h2>@ViewData("Title")</h2>
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">Phone:</abbr>
+    Passos, MG 37900-000<br /><br>
+    <abbr title="Phone">Telefone:</abbr>
     (35)99960-3975
 </address>
 

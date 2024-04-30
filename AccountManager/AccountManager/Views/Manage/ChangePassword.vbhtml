@@ -1,15 +1,15 @@
 ﻿@ModelType ChangePasswordViewModel
 @Code
-    ViewBag.Title = "Change Password"
+    ViewBag.Title = "Alterar Senha"
 End Code
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 
 @Using Html.BeginForm("ChangePassword", "Manage", FormMethod.Post, New With { .class = "form-horizontal", .role = "form" })
     @Html.AntiForgeryToken()
     
     @<text>
-    <h4>Change Password Form</h4>
+    <h4>Formulário de alteração de senha</h4>
     <hr />
     @Html.ValidationSummary("", New With { .class = "text-danger" })
     <div class="form-group">
@@ -32,7 +32,7 @@ End Code
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Change password" class="btn btn-default" />
+            <input type="submit" value="Alterar senha" class="btn btn-default" />
         </div>
     </div>
     </text>

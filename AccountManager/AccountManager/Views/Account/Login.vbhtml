@@ -3,7 +3,7 @@
     ViewBag.Title = "Entrar"
 End Code
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <div class="row">
     <div class="col-md-8">
         <section id="loginForm">

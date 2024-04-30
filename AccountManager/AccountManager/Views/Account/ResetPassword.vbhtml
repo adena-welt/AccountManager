@@ -3,7 +3,7 @@
     ViewBag.Title = "Alterar senha"
 End Code
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 
 @Using Html.BeginForm("ResetPassword", "Account", FormMethod.Post, New With {.class = "form-horizontal", .role = "form"})
 

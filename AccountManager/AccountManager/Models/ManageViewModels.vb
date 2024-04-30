@@ -21,32 +21,32 @@ End Class
 
 Public Class SetPasswordViewModel
     <Required>
-    <StringLength(100, ErrorMessage:="The {0} must be at least {2} characters long.", MinimumLength:=6)>
+    <StringLength(100, ErrorMessage:="A {0} deve ter pelo menos {2} caracteres.", MinimumLength:=6)>
     <DataType(DataType.Password)>
     <Display(Name:="New password")>
     Public Property NewPassword As String
 
     <DataType(DataType.Password)>
     <Display(Name:="Confirm new password")>
-    <Compare("NewPassword", ErrorMessage:="The new password and confirmation password do not match.")>
+    <Compare("NewPassword", ErrorMessage:="Certifique-se de que a nova senha e a senha de confimação informadas são idênticas.")>
     Public Property ConfirmPassword As String
 End Class
 
 Public Class ChangePasswordViewModel
     <Required>
     <DataType(DataType.Password)>
-    <Display(Name:="Current password")>
+    <Display(Name:="Senha atual")>
     Public Property OldPassword As String
 
     <Required>
-    <StringLength(100, ErrorMessage:="The {0} must be at least {2} characters long.", MinimumLength:=6)>
+    <StringLength(100, ErrorMessage:="A {0} deve ter pelo menos {2} caracteres.", MinimumLength:=6)>
     <DataType(DataType.Password)>
-    <Display(Name:="New password")>
+    <Display(Name:="Nova senha")>
     Public Property NewPassword As String
 
     <DataType(DataType.Password)>
-    <Display(Name:="Confirm new password")>
-    <Compare("NewPassword", ErrorMessage:="The new password and confirmation password do not match.")>
+    <Display(Name:="Confirme a nova senha")>
+    <Compare("NewPassword", ErrorMessage:="Certifique-se de que a nova senha e a senha de confimação informadas são idênticas.")>
     Public Property ConfirmPassword As String
 End Class
 
