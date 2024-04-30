@@ -17,6 +17,14 @@ Public Class ApplicationUser
         ' Add custom user claims here
         Return userIdentity
     End Function
+
+    Public Async Function DeleteAccount(manager As UserManager(Of ApplicationUser)) As Task
+        ' Excluir da tabela Authentications'
+        Await manager.RemovePasswordAsync(Me.Id)
+
+        ' Excluir da tabela Users'
+        Await manager.DeleteAsync(Me)
+    End Function
 End Class
 
 Public Class ApplicationDbContext

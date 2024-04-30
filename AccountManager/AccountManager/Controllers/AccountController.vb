@@ -70,7 +70,7 @@ Public Class AccountController
                     .RememberMe = model.RememberMe
                 })
             Case Else
-                ModelState.AddModelError("", "Invalid login attempt.")
+                ModelState.AddModelError("", "Tentativa de login inválida.")
                 Return View(model)
         End Select
     End Function

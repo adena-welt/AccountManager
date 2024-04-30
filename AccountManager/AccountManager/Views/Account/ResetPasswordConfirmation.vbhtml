@@ -7,6 +7,6 @@ End Code
 </hgroup>
 <div>
     <p>
-        Your password has been reset. Please @Html.ActionLink("click here to log in", "Login", "Account", routeValues:=Nothing, htmlAttributes:=New With {Key .id = "loginLink"})
+        Sua senha foi alterado. Por favor @Html.ActionLink("clique aqui para entrar", "Login", "Account", routeValues:=Nothing, htmlAttributes:=New With {Key .id = "loginLink"})
     </p>
 </div>

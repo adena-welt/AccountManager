@@ -1,6 +1,6 @@
 ﻿@ModelType ResetPasswordViewModel
 @Code
-    ViewBag.Title = "Reset password"
+    ViewBag.Title = "Alterar senha"
 End Code
 
 <h2>@ViewBag.Title.</h2>
@@ -10,7 +10,7 @@ End Code
     @Html.AntiForgeryToken()
 
     @<text>
-    <h4>Reset your password.</h4>
+    <h4>Altere sua senha.</h4>
     <hr />
     @Html.ValidationSummary("", New With {.class = "text-danger"})
     @Html.HiddenFor(Function(m) m.Code)

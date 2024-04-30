@@ -22,12 +22,12 @@ Public Class VerifyCodeViewModel
     Public Property Provider As String
     
     <Required>
-    <Display(Name:="Code")>
+    <Display(Name:="Código")>
     Public Property Code As String
     
     Public Property ReturnUrl As String
-    
-    <Display(Name:="Remember this browser?")>
+
+    <Display(Name:="Lembrar deste navegador?")>
     Public Property RememberBrowser As Boolean
 
     Public Property RememberMe As Boolean
@@ -47,36 +47,36 @@ Public Class LoginViewModel
 
     <Required>
     <DataType(DataType.Password)>
-    <Display(Name:="Password")>
+    <Display(Name:="Senha")>
     Public Property Password As String
 
-    <Display(Name:="Remember me?")>
+    <Display(Name:="Lembrar senha?")>
     Public Property RememberMe As Boolean
 End Class
 
 Public Class RegisterViewModel
-    <Required(ErrorMessage:="The First Name field is required.")>
-    <Display(Name:="First Name")>
+    <Required(ErrorMessage:="O campo Nome é obrigatório.")>
+    <Display(Name:="Nome")>
     Public Property FirstName As String
 
-    <Required(ErrorMessage:="The Last Name field is required.")>
-    <Display(Name:="Last Name")>
+    <Required(ErrorMessage:="O campo Sobrenome é obrigatório.")>
+    <Display(Name:="Sobrenome")>
     Public Property LastName As String
 
-    <Required(ErrorMessage:="The Email field is required.")>
-    <EmailAddress(ErrorMessage:="Invalid Email Address.")>
+    <Required(ErrorMessage:="O campo Email é obrigatório.")>
+    <EmailAddress(ErrorMessage:="Endereço de Email inválido.")>
     <Display(Name:="Email")>
     Public Property Email As String
 
-    <Required(ErrorMessage:="The Password field is required.")>
-    <StringLength(100, ErrorMessage:="The {0} must be at least {2} characters long.", MinimumLength:=6)>
+    <Required(ErrorMessage:="O campo Senha é obrigatório.")>
+    <StringLength(100, ErrorMessage:="A {0} deve ter pelo menos {2} caracteres.", MinimumLength:=6)>
     <DataType(DataType.Password)>
-    <Display(Name:="Password")>
+    <Display(Name:="Senha")>
     Public Property Password As String
 
     <DataType(DataType.Password)>
-    <Display(Name:="Confirm password")>
-    <Compare("Password", ErrorMessage:="The password and confirmation password do not match.")>
+    <Display(Name:="Confirmar senha")>
+    <Compare("Password", ErrorMessage:="Certifique-se de que as senhas informadas são idênticas.")>
     Public Property ConfirmPassword As String
 End Class
 
@@ -87,14 +87,14 @@ Public Class ResetPasswordViewModel
     Public Property Email() As String
 
     <Required>
-    <StringLength(100, ErrorMessage:="The {0} must be at least {2} characters long.", MinimumLength:=6)>
+    <StringLength(100, ErrorMessage:="A {0} deve ter pelo menos {2} caracteres.", MinimumLength:=6)>
     <DataType(DataType.Password)>
-    <Display(Name:="Password")>
+    <Display(Name:="Senha")>
     Public Property Password() As String
 
     <DataType(DataType.Password)>
-    <Display(Name:="Confirm password")>
-    <Compare("Password", ErrorMessage:="The password and confirmation password do not match.")>
+    <Display(Name:="Confirmar senha")>
+    <Compare("Password", ErrorMessage:="Certifique-se de que as senhas informadas são idênticas")>
     Public Property ConfirmPassword() As String
 
     Public Property Code() As String

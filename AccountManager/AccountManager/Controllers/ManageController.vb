@@ -286,6 +286,17 @@ Public Class ManageController
         MyBase.Dispose(disposing)
     End Sub
 
+    ' POST: /Manage/DeleteAccount
+    <HttpPost>
+    <ValidateAntiForgeryToken>
+    Public Async Function DeleteAccount() As Task(Of ActionResult)
+        Dim userInfo = Await UserManager.FindByIdAsync(User.Identity.GetUserId())
+        If userInfo IsNot Nothing Then
+            Await userInfo.DeleteAccount(UserManager)
+        End If
+        AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie)
+        Return RedirectToAction("Index", "Home")
+    End Function
 #Region "Helpers"
     ' Used for XSRF protection when adding external logins
     Private Const XsrfKey As String = "XsrfId"

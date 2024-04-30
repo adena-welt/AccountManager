@@ -1,6 +1,6 @@
 ﻿@ModelType RegisterViewModel
 @Code
-    ViewBag.Title = "Register"
+    ViewBag.Title = "Cadastrar"
 End Code
 
 <h2>@ViewBag.Title.</h2>
@@ -10,7 +10,7 @@ End Code
     @Html.AntiForgeryToken()
 
     @<text>
-    <h4>Create a new account.</h4>
+    <h4>Crie uma nova conta.</h4>
     <hr />
     @Html.ValidationSummary("", New With {.class = "text-danger"})
     <div class="form-group">
@@ -47,7 +47,7 @@ End Code
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
+            <input type="submit" class="btn btn-default" value="Cadastrar" />
         </div>
     </div>
     </text>
