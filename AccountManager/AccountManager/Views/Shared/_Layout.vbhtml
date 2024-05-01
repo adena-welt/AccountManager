@@ -30,8 +30,8 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
+        <footer style="bottom: 0; position:fixed;">
+            <hr />
             <p>&copy; @DateTime.Now.Year - Minha Aplicação ASP.NET</p>
         </footer>
     </div>

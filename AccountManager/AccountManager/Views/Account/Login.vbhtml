@@ -37,7 +37,7 @@ End Code
                     </div>
                     <div class="form-group">
                         <div class="col-md-offset-3 col-md-9">
-                            <input type="submit" value="Entrar" class="btn btn-primary" /> <!-- Alterado para btn-primary -->
+                            <input type="submit" value="Entrar" class="btn btn-primary" />
                         </div>
                     </div>
                     <p>

@@ -5,9 +5,6 @@ Imports Microsoft.Owin.Security
 Public Class IndexViewModel
     Public Property HasPassword As Boolean
     Public Property Logins As IList(Of UserLoginInfo)
-    Public Property PhoneNumber As String
-    Public Property TwoFactor As Boolean
-    Public Property BrowserRemembered As Boolean
 End Class
 
 Public Class ManageLoginsViewModel

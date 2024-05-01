@@ -38,15 +38,12 @@ Public Class ManageController
     '
     ' GET: /Manage/Index
     Public Async Function Index(message As System.Nullable(Of ManageMessageId)) As Task(Of ActionResult)
-        ViewData!StatusMessage = If(message = ManageMessageId.ChangePasswordSuccess, "Sua senha foi alterada.", If(message = ManageMessageId.SetPasswordSuccess, "Sua senha foi definida.", If(message = ManageMessageId.SetTwoFactorSuccess, "Your two-factor authentication provider has been set.", If(message = ManageMessageId.[Error], "An error has occurred.", If(message = ManageMessageId.AddPhoneSuccess, "Your phone number was added.", If(message = ManageMessageId.RemovePhoneSuccess, "Your phone number was removed.", ""))))))
+        ViewData!StatusMessage = If(message = ManageMessageId.ChangePasswordSuccess, "Sua senha foi alterada.", If(message = ManageMessageId.[Error], "Ocorreu um erro.", ""))
 
         Dim userId = User.Identity.GetUserId()
         Dim model = New IndexViewModel() With {
             .HasPassword = HasPassword(),
-            .PhoneNumber = Await UserManager.GetPhoneNumberAsync(userId),
-            .TwoFactor = Await UserManager.GetTwoFactorEnabledAsync(userId),
-            .Logins = Await UserManager.GetLoginsAsync(userId),
-            .BrowserRemembered = Await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+            .Logins = Await UserManager.GetLoginsAsync(userId)
         }
         Return View(model)
     End Function
@@ -136,21 +133,9 @@ Public Class ManageController
         Return False
     End Function
 
-    Private Function HasPhoneNumber() As Boolean
-        Dim userInfo = UserManager.FindById(User.Identity.GetUserId())
-        If userInfo IsNot Nothing Then
-            Return userInfo.PhoneNumber IsNot Nothing
-        End If
-        Return False
-    End Function
-
     Public Enum ManageMessageId
-        AddPhoneSuccess
         ChangePasswordSuccess
-        SetTwoFactorSuccess
-        SetPasswordSuccess
         RemoveLoginSuccess
-        RemovePhoneSuccess
         [Error]
     End Enum
 
