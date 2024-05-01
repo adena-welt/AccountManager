@@ -1,10 +1,10 @@
 ﻿@Imports System.Web.Mvc
 @ModelType HandleErrorInfo
 @Code
-    ViewBag.Title = "Locked Out"
+    ViewBag.Title = "Bloqueado"
 End Code
 
 <hgroup>
-    <h1 class="text-danger">Locked out.</h1>
-    <h2 class="text-danger">This account has been locked out, please try again later.</h2>
+    <h1 class="text-danger">Bloqueado</h1>
+    <h2 class="text-danger">Essa conta foi bloqueada, tente novamente mais tarde.</h2>
 </hgroup>

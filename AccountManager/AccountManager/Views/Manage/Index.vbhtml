@@ -24,7 +24,7 @@ End Code
         <dt>Excluir Conta:</dt>
         <dd>
             @If User.Identity.IsAuthenticated Then
-                Using Html.BeginForm("Excluir Conta", "Manage", FormMethod.Post, New With {.id = "deleteAccountForm"})
+                Using Html.BeginForm("DeleteAccount", "Manage", FormMethod.Post, New With {.id = "deleteAccountForm"})
                     @Html.AntiForgeryToken()
                     @<button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza de que deseja excluir sua conta? Esta ação é irreversível.');">Excluir</button>
                 End Using

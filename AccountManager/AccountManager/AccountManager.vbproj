@@ -292,24 +292,10 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.vbhtml" />
-    <Content Include="Views\Account\ConfirmEmail.vbhtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.vbhtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.vbhtml" />
-    <Content Include="Views\Account\ForgotPassword.vbhtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.vbhtml" />
     <Content Include="Views\Account\Login.vbhtml" />
     <Content Include="Views\Account\Register.vbhtml" />
-    <Content Include="Views\Account\ResetPassword.vbhtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.vbhtml" />
-    <Content Include="Views\Account\SendCode.vbhtml" />
-    <Content Include="Views\Account\VerifyCode.vbhtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.vbhtml" />
     <Content Include="Views\Manage\ChangePassword.vbhtml" />
     <Content Include="Views\Manage\Index.vbhtml" />
-    <Content Include="Views\Manage\ManageLogins.vbhtml" />
-    <Content Include="Views\Manage\SetPassword.vbhtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.vbhtml" />
     <Content Include="Views\Shared\Lockout.vbhtml" />
     <Content Include="Views\Shared\_LoginPartial.vbhtml" />
   </ItemGroup>

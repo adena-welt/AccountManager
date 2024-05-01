@@ -19,19 +19,6 @@ Public Class FactorViewModel
     Public Property Purpose As String
 End Class
 
-Public Class SetPasswordViewModel
-    <Required>
-    <StringLength(100, ErrorMessage:="A {0} deve ter pelo menos {2} caracteres.", MinimumLength:=6)>
-    <DataType(DataType.Password)>
-    <Display(Name:="New password")>
-    Public Property NewPassword As String
-
-    <DataType(DataType.Password)>
-    <Display(Name:="Confirm new password")>
-    <Compare("NewPassword", ErrorMessage:="Certifique-se de que a nova senha e a senha de confimação informadas são idênticas.")>
-    Public Property ConfirmPassword As String
-End Class
-
 Public Class ChangePasswordViewModel
     <Required>
     <DataType(DataType.Password)>
@@ -48,27 +35,4 @@ Public Class ChangePasswordViewModel
     <Display(Name:="Confirme a nova senha")>
     <Compare("NewPassword", ErrorMessage:="Certifique-se de que a nova senha e a senha de confimação informadas são idênticas.")>
     Public Property ConfirmPassword As String
-End Class
-
-Public Class AddPhoneNumberViewModel
-    <Required>
-    <Phone>
-    <Display(Name:="Phone Number")>
-    Public Property Number As String
-End Class
-
-Public Class VerifyPhoneNumberViewModel
-    <Required>
-    <Display(Name:="Code")>
-    Public Property Code As String
-
-    <Required>
-    <Phone>
-    <Display(Name:="Phone Number")>
-    Public Property PhoneNumber As String
-End Class
-
-Public Class ConfigureTwoFactorViewModel
-    Public Property SelectedProvider As String
-    Public Property Providers As ICollection(Of System.Web.Mvc.SelectListItem)
 End Class

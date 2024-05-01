@@ -6,13 +6,13 @@
     End Function
 
     Function About() As ActionResult
-        ViewData("Message") = "Your application description page."
+        ViewData("Message") = "Descrição da aplicação"
 
         Return View()
     End Function
 
     Function Contact() As ActionResult
-        ViewData("Message") = "Your contact page."
+        ViewData("Message") = "Página de contato"
 
         Return View()
     End Function
