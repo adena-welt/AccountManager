@@ -2,8 +2,12 @@
     ViewData("Title") = "Contato"
 End Code
 
-<div style="display: flex; justify-content: center;  margin-top: 30px;">
-    <div style="width: 50%; border: 1px solid #ccc; padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
+<head>
+    @Styles.Render("~/Content/Styles.css")
+</head>
+
+<div class="centered-container">
+    <div class="styled-box">
         <h2>@ViewData("Title")</h2>
         <hr />
         <br />

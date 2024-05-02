@@ -3,8 +3,12 @@
     ViewBag.Title = "Gerenciamento"
 End Code
 
-<div style="display: flex; justify-content: center;">
-    <div style="width: 40%; border: 1px solid #ccc; padding: 20px; background-color: #f9f9f9; border-radius: 5px; margin-top: 30px;">
+<head>
+    @Styles.Render("~/Content/Styles.css")
+</head>
+
+<div class="centered-container">
+    <div class="styled-box">
         <h2>@ViewBag.Title</h2>
 
         <p class="text-success">@ViewBag.StatusMessage</p>
@@ -15,7 +19,7 @@ End Code
                 <dt class="col-md-4">Senha:</dt>
                 <dd style="margin-bottom: 10px;">
                     @If Model.HasPassword Then
-                        @Html.ActionLink("Alterar sua senha", "ChangePassword", Nothing, New With {.class = "btn btn-primary"})
+                    @Html.ActionLink("Alterar sua senha", "ChangePassword", Nothing, New With {.class = "btn btn-primary"})
                     End If
                 </dd>
                 <br>
@@ -23,8 +27,8 @@ End Code
                 <dd>
                     @If User.Identity.IsAuthenticated Then
                         Using Html.BeginForm("DeleteAccount", "Manage", FormMethod.Post, New With {.id = "deleteAccountForm"})
-                            @Html.AntiForgeryToken()
-                            @<button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza de que deseja excluir sua conta? Esta ação é irreversível.');">Excluir sua conta</button>
+                    @Html.AntiForgeryToken()
+                    @<button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza de que deseja excluir sua conta? Esta ação é irreversível.');">Excluir sua conta</button>
                         End Using
                     End If
                 </dd>

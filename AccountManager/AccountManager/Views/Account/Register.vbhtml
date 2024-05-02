@@ -3,8 +3,12 @@
     ViewBag.Title = "Cadastrar"
 End Code
 
-<div style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">
-    <div style="width: 50%; border: 1px solid #ccc; padding: 20px; background-color: #f9f9f9; border-radius: 5px; ">
+<head>
+    @Styles.Render("~/Content/Styles.css")
+</head>
+
+<div class="centered-container">
+    <div class="styled-box">
         <h2>@ViewBag.Title</h2>
         @Using Html.BeginForm("Register", "Account", FormMethod.Post, New With {.class = "form-horizontal", .role = "form"})
         @Html.AntiForgeryToken()
